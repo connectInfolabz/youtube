@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PRofile Page</title>
+  <!-- bootstrap css -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+  <!-- fontawsome cdn link -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- external css link -->
+  <link href="style.css" rel="stylesheet" />
+  <!-- bootstrap icon link -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/font/bootstrap-icons.min.css"
+    rel="stylesheet" />
+</head>
+
+<body>
+  <!-- navbar section start -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark p-0">
+    <div class="container-fluid">
+      <!-- <i class="fa fa-navicon text-light" style="font-size: 30px;"></i> -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0 p-3">
+          <li class="nav-item">
+            <i class="nav-link active fa fa-youtube-play text-danger ms-5" aria-current="page"
+              style="font-size: 30px; font-weight: 100"><b class="text-light ms-2">YouTube</b></i>
+          </li>
+        </ul>
+        <form class="d-flex form1" style="margin-right: 220px">
+          <input class="form-control bg-dark text-light me-2" type="search" placeholder="Search" aria-label="Search"
+            name="object" />
+          <button type="submit" onclick="fetchsearch(this.form); return false;" class="border-0">
+            <i class="fa fa-search text-light rounded-2" style="font-size: 20px"></i>
+          </button>
+          <i class="fa fa-microphone text-light mic ms-3 me-5"></i>
+        </form>
+        <ul class="navbar-nav mb-2 mb-lg-0 logo">
+          <li class="nav-item">
+            <i class="nav-link active fa fa-video-camera text-light" aria-current="page"></i>
+            <i class="nav-link active fa fa-bell text-light" aria-current="page"></i>
+            <i class="nav-link active fa fa-user-circle text-light" aria-current="page"></i>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- navbar secvtion end -->
+
+  <!-- right section  -->
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-lg-2 right-sec p-0 sidebar d-md-none d-sm-none d-lg-block">
+        <ul>
+          <li><i class="bi bi-house-door-fill"></i>Home</li>
+          <li><i class="bi bi-lightning-fill"></i>Shorts</li>
+          <li><i class="bi bi-collection-play-fill"> </i>subscription</li>
+        </ul>
+        <ul>
+          <h5>Explore</h5>
+          <li><i class="bi bi-fire"></i>Trending</li>
+          <li><i class="bi bi-bag-check"></i>Shorts</li>
+          <li><i class="bi bi-music-note"> </i>Music</li>
+          <li><i class="bi bi-film"> </i>Movies</li>
+          <li><i class="bi bi-broadcast"> </i>Live</li>
+          <li><i class="bi bi-controller"> </i>Gaming</li>
+          <li><i class="bi bi-newspaper"> </i>News</li>
+          <li><i class="bi bi-person"> </i>Sports</li>
+          <li><i class="bi bi-book"> </i>Courses</li>
+          <li><i class="bi bi-heart-pulse"> </i>Fashion & Beauty</li>
+          <li><i class="bi bi-broadcast-pin"> </i>Podcasts</li>
+        </ul>
+      </div>
+      <div class="col-lg-10 ps-5 pe-5 mt-2">
+        <div class="container">
+          <div id="banner1"></div>
+          <!-- <img
+            src="https://yt3.googleusercontent.com/ZABFZF_WuuhcelMmH3Q4uL7vUoYFJLnqFsQFh5SEYqrGapWW7CEWVkzLcoARyP4Z-_l6OrHalZg=w1707-fcrop64=1,00005a57ffffa5a8-k-c0xffffffff-no-nd-rj"
+            style="width: 100%; border-radius: 20px;"> -->
+          <div class="row mt-4">
+            <div id="aboutchannel"></div>
+            <!-- <div class="col-lg-3">
+              <img
+                src="https://yt3.googleusercontent.com/3K6h6gpMPf4mK9qh6SXTl0W3PLxnOMzUnFHc2lbS9t-ucS-b4JGcR8nW7ja9XDYkHM-kAnijk2c=s160-c-k-c0x00ffffff-no-rj"
+                class="img4" />
+            </div>
+            <div class="col-lg-9 text-style text-light">
+              <b class="" style="font-size: 2rem;">ICC<span class="fa fa-check-circle  ms-2"
+                  style="font-size: 1rem;"></span></b>
+              <p class="">@ICC
+                •
+                11.7M subscribers
+                •
+                4.6K videos</p>
+              <p>This is the official YouTube channel of the International Cricket Council.</p>
+              <a href="#" class="text-decoration-none">icc-cricket.com
+                <b class="text-light">and 5 more links</b></a>
+              <p> <button class="btn-light p-2 rounded-4 button1 mt-3">subscribe</button></p>
+            </div>-->
+            <div id="tabes"></div>
+            <ul class="nav nav-tabs">
+              <!-- <li class="nav-item">
+                <a class="nav-link " aria-current="page" href="#" style="color: gray;">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link " aria-current="page" href="#" style="color: gray;">Video</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link " aria-current="page" href="#" style="color: gray;">Shorts</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link " aria-current="page" href="#" style="color: gray;">Live</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link " aria-current="page" href="#" style="color: gray;">Playlists</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link " aria-current="page" href="#" style="color: gray;">Community</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link " aria-current="page" href="#" style="color: gray;"><span
+                    class="fa fa-search"></span></a>
+              </li>
+            </ul> -->
+              <div class="row">
+                <h5 class="text-light mt-3"><b>For You</b></h5>
+                <div id="channelvideo" class="row"></div>
+
+                <!-- <div class="col-lg-5">
+                <iframe width="424" height="238" class="mt-3 mb-3" src="https://www.youtube.com/embed/9fEAl6Qakz4"
+                  title="A Day in the Life of a Champion - Suzie Bates | WT20WC 2024" frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+              </div>
+              <div class="col-lg-7">
+                <div class="col mt-4 text-light">
+                  <p>A day in a champion </p>
+                  <p style="color: gray;">82,660 views
+                    4 weeks ago</p>
+                  <p>A Day in the Life of a Champion - Suzie Bates | WT20WC 2024</p>
+                  <p>Subscribe to our YouTube channel 👉 @ICC </p>
+
+                </div>
+              </div> -->
+                <hr style="color: white;">
+              </div>
+              <div class="row">
+                <h5 class="text-light"><b>Shorts</b></h5>
+                <div id="short" class="row"></div>
+                <h5 class="text-light mt-5"><b>Video</b></h5>
+                <div id="playlist" class="row"></div>
+                <!-- <div class="col mt-3">
+                <div class="card border-0" style="width: 100%;">
+                  <iframe width="" height="315" src="https://www.youtube.com/embed/EE_cxtrwPFQ?si=sacdMn4tNWdxK3Xl"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                  <div class="card-body p-0 m-0">
+                    <p class="card-text text-light">
+                      Watch later
+                      Add to queue
+                      Every Six in India's 410! CWC 2023</p>
+                  </div>
+                </div>
+              </div> -->
+                <!-- <div class="col mt-3">
+                <div class="card border-0" style="width: 100%;">
+                  <iframe width="" height="315" src="https://www.youtube.com/embed/EE_cxtrwPFQ?si=sacdMn4tNWdxK3Xl"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                  <p class="card-text text-light">
+                    Watch later
+                    Add to queue
+                    Every Six in India's 410! CWC 2023</p>
+                </div>
+              </div> -->
+                <!-- <div class="col mt-3">
+                <div class="card border-0" style="width: 100%;">
+                  <iframe width="" height="315" src="https://www.youtube.com/embed/EE_cxtrwPFQ?si=sacdMn4tNWdxK3Xl"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                  <p class="card-text text-light">
+                    Watch later
+                    Add to queue
+                    Every Six in India's 410! CWC 2023</p>
+                </div>
+              </div> -->
+
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- bootstrap js -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+  <script>
+    // Load Youtub ifream Player Api asynchronously
+    var tag = document.createElement('script');
+    tag.src = "https://www.youtube.com/channel_api";
+    var firstscriptTag = document.getElementsByTagName('script')[0];
+    firstscriptTag.parentNode.insertBefore(tag, firstscriptTag);
+
+    // fetch video url
+    let channelId = window.location.search.split("=")[1];
+
+
+    // channel data fetch
+    const url = `https://yt-api.p.rapidapi.com/channel/about?id=${channelId}`;
+    const options = {
+      method: 'GET',
+      headers: {
+        'x-rapidapi-key': '015351b58fmsh80f9d11792bb076p18c914jsnf079955c4424',
+        'x-rapidapi-host': 'yt-api.p.rapidapi.com'
+      }
+    };
+
+
+    // console.log(channelId);
+    async function channelapi() {
+      try {
+        const response = await fetch(url, options);
+        let result = await response.json();
+        console.log(result);
+        document.getElementById('banner1').innerHTML += `
+        <img
+            src="${result['banner'][0].url}"
+            style="width: 100%; border-radius: 20px;">
+        `;
+        document.getElementById('aboutchannel').innerHTML += `
+        <div class="col-lg-3">
+              <img
+                src="${result['avatar'][0].url}"
+                class="img4" />
+        </div>
+        <div class="col-lg-9 text-style text-light">
+              <b class="" style="font-size: 2rem;">${result['title']}<span class="fa fa-check-circle  ms-2"
+                  style="font-size: 1rem;"></span></b>
+              <p class="">${result['channelHandle']}
+                •
+                ${result['subscriberCountText']}
+                •
+                ${result['videosCountText']}</p>
+              <p>${result['description']}</p>
+              <p> <button class="btn-light p-2 rounded-4 button1 mt-3">subscribe</button></p>
+        </div>
+            
+        `;
+      } catch (error) {
+        console.error(error);
+      }
+    }
+
+    channelapi()
+
+    // fetch Videos
+    function videoapi() {
+      const url = `https://yt-api.p.rapidapi.com/channel/videos?id=${channelId}`;
+      const options = {
+        method: 'GET',
+        headers: {
+          'x-rapidapi-key': '015351b58fmsh80f9d11792bb076p18c914jsnf079955c4424',
+          'x-rapidapi-host': 'yt-api.p.rapidapi.com'
+        }
+      };
+
+
+
+      async function fetchdata() {
+        try {
+          const response = await fetch(url, options);
+          let result = await response.json();
+          result = result['data'];
+          console.log(result);
+
+          for (let i = 1; i <= 3; i++) {
+            console.log(result[i]);
+            if (result[i].type === "video") {
+              document.getElementById('channelvideo').innerHTML +=
+                `
+            <div class="col-lg-4 border-3 m-0">
+               <img src="${result[i]['thumbnail'][3].url}"></img>
+
+              <div class="col mt-4 text-light p-0 m-0">
+               <p>${result[i]['title']}</p>
+                <p style="color: gray;" class=" p-0">${result[i]['viewCount']} views
+                ${result[i]['publishedTimeText']}</p>
+                
+              </div>
+            </div>
+        `;
+            }
+
+          }
+        } catch (error) {
+          console.error(error);
+        }
+
+      }
+
+      fetchdata();
+    }
+
+    videoapi();
+
+    // playlist Api
+    function playlistapi() {
+      const url = `https://yt-api.p.rapidapi.com/channel/playlists?id=${channelId}`;
+      const options = {
+        method: 'GET',
+        headers: {
+          'x-rapidapi-key': '969e850623mshaeefd98a1c5a46fp114733jsn21d35431569e',
+          'x-rapidapi-host': 'yt-api.p.rapidapi.com'
+        }
+      };
+      async function fetchplaylist() {
+        try {
+          const response = await fetch(url, options);
+          let result = await response.json();
+          //console.log(result);
+          result = result['data'];
+
+          for (let i = 0; i <= 3; i++) {
+            document.getElementById('playlist').innerHTML += `
+            
+          <div class="col-lg-3 col-md-4 col-sm-6  mt-3"> 
+            <div class="card border-0" ;">
+                    <img  src="${result[i]['thumbnail'][0].url}"></img>
+                <div class="card-body p-0 m-0">                          
+                    <p class="card-text text-light"> 
+                      ${result[i]['title']}</p>
+                     <p class="card-text text-light bi-music-note-list playlist-icon">${result[i]['videoCount']} videos</P>
+                </div>
+            </div>
+          </div>
+          `;
+          }
+        } catch (error) {
+          console.error(error);
+        }
+      }
+      fetchplaylist();
+    }
+
+    playlistapi();
+
+    // tabes Api links
+    function tabapi() {
+      const url = `https://yt-api.p.rapidapi.com/channel/community?id=${channelId}`;
+      const options = {
+        method: 'GET',
+        headers: {
+          'x-rapidapi-key': '015351b58fmsh80f9d11792bb076p18c914jsnf079955c4424',
+          'x-rapidapi-host': 'yt-api.p.rapidapi.com'
+        }
+      };
+
+      async function fetchtab() {
+        try {
+          const response = await fetch(url, options);
+          let result = await response.json();
+          //console.log(result);
+
+          document.getElementById('tabes').innerHTML += `
+        
+          <ul class="nav nav-tabs">
+              <li class="nav-item">
+                <a class="nav-link " aria-current="page" href="profilepage.html?channelId=${result.meta['channelId']}" style="color: gray;">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link " aria-current="page" href='video.html?channelId=${result.meta['channelId']}' style="color: gray;">Videos</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link " aria-current="page" href='shorts.html?channelId=${result.meta['channelId']}' style="color: gray;">Shorts</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link " aria-current="page" href='playlist.html?channelId=${result.meta['channelId']}' style="color: gray;">playlist</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link " aria-current="page" href='#' style="color: gray;">Live</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link " aria-current="page" href='community.html?channelId=${result.meta['channelId']}' style="color: gray;" style="color: gray;">Community</a>
+              </li>
+              
+              <li class="nav-item">
+                <a class="nav-link " aria-current="page" href="#" style="color: gray;"><span
+                    class="fa fa-search"></span></a>
+              </li>
+            </ul>
+          `
+        } catch (error) {
+          console.error(error);
+        }
+      }
+
+      fetchtab();
+    }
+
+    tabapi();
+
+    // shorts data fetch
+    function apishorts() {
+      const url = `https://yt-api.p.rapidapi.com/channel/shorts?id=${channelId}`;
+      const options = {
+        method: 'GET',
+        headers: {
+          'x-rapidapi-key': '015351b58fmsh80f9d11792bb076p18c914jsnf079955c4424',
+          'x-rapidapi-host': 'yt-api.p.rapidapi.com'
+        }
+      };
+
+      async function fetchsorts() {
+        try {
+          const response = await fetch(url, options);
+          let result = await response.json();
+          //console.log(result);
+          result = result['data'];
+          for (let i = 0; i <= 5; i++) {
+            document.getElementById('short').innerHTML += `
+                
+                    <div class="col-lg-3 col-md-4 col-sm-6 mb-3 mt-3">
+                        <div class="card border-0 mt-3 text-light short-sec  p-0 m-0"">
+                            <img src="${result[i]['thumbnail'][1][0].url}"
+                                class="card-img-top" alt="..." style="">
+                            <div class="card-body p-0 m-0">
+                                <h5 class="card-title ">${result[i]['title']}</h5>
+                                <div>
+                                    <b class="fa fa-ellipsis-v pull-right"></b>
+                                    
+                                </div>
+                                <p class="card-text">${result[i]['viewCountText']}</p>
+                                
+                            </div>
+                        </div>
+                    </div>
+                
+                `;
+          }
+
+        } catch (error) {
+          console.error(error);
+        }
+      }
+      fetchsorts();
+    }
+
+    apishorts();
+
+
+
+  </script>
+</body>
+
+</html>
